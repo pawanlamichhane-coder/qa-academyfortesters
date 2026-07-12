@@ -4,6 +4,8 @@ import ThemeToggle from "@/components/ThemeToggle";
 const links = [
   { href: "/tutorials", label: "Tutorials" },
   { href: "/learning-materials", label: "Learning Materials" },
+  { href: "/portfolio-projects", label: "Practice Projects" },
+  { href: "/resume-and-interview", label: "Interview Prep" },
   { href: "/career-roadmap", label: "Career Roadmap" },
   { href: "/roadmap", label: "Roadmap" },
   { href: "/resources", label: "Resources" },

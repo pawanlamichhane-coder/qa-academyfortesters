@@ -49,12 +49,19 @@ const guideLinks = [
   { title: "Automation Best Practices", href: "/guides/automation-best-practices", description: "Learn how to design reliable, maintainable, and high-value test automation." },
   { title: "Test Strategy and Planning", href: "/guides/test-strategy", description: "Understand how to plan testing, manage risk, and make release decisions with confidence." },
   { title: "QA Metrics and Reporting", href: "/guides/metrics-and-reporting", description: "Learn how to track quality, report progress, and communicate testing outcomes clearly." },
-  { title: "Detailed QA Tutorials", href: "/tutorials", description: "Access in-depth tutorials on software testing, test cases, API testing, and Selenium basics." },
+  { title: "Detailed QA Tutorials", href: "/tutorials", description: "Access in-depth tutorials on software testing, test cases, API testing, Selenium, Playwright, Cypress, SQL, and security." },
   { title: "QA Portfolio Projects", href: "/portfolio-projects", description: "Create practical projects that demonstrate QA thinking, bug reporting, automation, and quality skills." },
   { title: "Resume and Interview Prep", href: "/resume-and-interview", description: "Get ready for QA applications and interviews with focused preparation tips." },
   { title: "QA Interview Questions", href: "/interview-questions", description: "Prepare for interviews with practical QA questions and answers." },
   { title: "Learning Materials", href: "/learning-materials", description: "Follow a full setup-to-practice path covering fundamentals, tools, and real projects." },
   { title: "QA Career Roadmap", href: "/career-roadmap", description: "See how QA skills grow from junior roles into senior quality engineering positions." },
+];
+
+const learningDashboardCards = [
+  { title: "Course Catalog", href: "/learning-materials", description: "Browse structured learning paths from basics to advanced QA topics." },
+  { title: "Practice Exercises", href: "/portfolio-projects", description: "Work on hands-on labs, assignments, and scenario-based QA activities." },
+  { title: "Quiz Center", href: "/interview-questions", description: "Test your knowledge and prepare for interviews with practical questions." },
+  { title: "Certification Prep", href: "/resume-and-interview", description: "Build confidence with interview preparation and QA career-ready study material." },
 ];
 
 export default function Home() {
@@ -149,6 +156,21 @@ export default function Home() {
             <h3 className="font-semibold">Career-focused</h3>
             <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>Helps learners move from junior QA to capable automation and quality engineering roles.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="mb-12 rounded-2xl border p-6" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-2xl font-bold mb-4">Learning dashboard</h2>
+        <p className="mb-5 text-sm" style={{ color: "var(--text-muted)" }}>
+          This site is built as a complete QA learning platform with structured study areas for beginners, intermediate learners, and advanced professionals.
+        </p>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {learningDashboardCards.map((card) => (
+            <a key={card.href} href={card.href} className="rounded-xl border p-4 transition hover:-translate-y-0.5" style={{ borderColor: "var(--border)", background: "var(--bg-alt)" }}>
+              <h3 className="font-semibold" style={{ color: "var(--brand)" }}>{card.title}</h3>
+              <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>{card.description}</p>
+            </a>
+          ))}
         </div>
       </section>
 
