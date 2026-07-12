@@ -17,6 +17,31 @@ const tutorials = [
     description: "Explore schema testing, transactions, constraints, SQL examples, and practical database testing workflows.",
   },
   {
+    title: "Playwright Testing – From Basics to Advanced",
+    href: "/tutorials/playwright-testing",
+    description: "Learn modern browser automation with locators, assertions, fixtures, and reliable test design.",
+  },
+  {
+    title: "Cypress Testing – End-to-End Automation",
+    href: "/tutorials/cypress-testing",
+    description: "Understand Cypress commands, assertions, custom commands, and UI automation best practices.",
+  },
+  {
+    title: "SQL for Testers",
+    href: "/tutorials/sql-for-testers",
+    description: "Use SQL to validate data, inspect application state, and uncover issues at the database layer.",
+  },
+  {
+    title: "Performance Testing",
+    href: "/tutorials/performance-testing",
+    description: "See how load, stress, and scalability testing help teams deliver reliable products under pressure.",
+  },
+  {
+    title: "Security Testing",
+    href: "/tutorials/security-testing",
+    description: "Learn how to test authentication, access control, input handling, and common web vulnerabilities.",
+  },
+  {
     title: "API Testing with Postman",
     href: "/tutorials/postman-api-testing",
     description: "A step-by-step guide to testing REST APIs, sending requests, validating responses, and creating useful assertions.",
