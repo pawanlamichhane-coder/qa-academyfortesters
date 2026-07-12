@@ -6,12 +6,14 @@ export default function CheatsheetsPage() {
     { title: "Playwright Locators", icon: "🎭", items: ["page.getByRole('button', {name})", "page.getByLabel('Email')", "page.getByPlaceholder('Enter')", "page.getByText('Welcome')", "page.getByTestId('submit')", "page.locator('#email')", "page.locator('.class')"] },
     { title: "Postman Assertions", icon: "📮", items: ["pm.response.to.have.status(200)", "pm.response.json().name", "pm.expect(body).to.be.an('array')", "pm.environment.set('key','val')", "pm.response.responseTime < 500", "pm.response.to.have.header()", "pm.response.to.have.jsonSchema()"] },
     { title: "Testing Acronyms", icon: "📋", items: ["SDLC — Software Dev Life Cycle", "STLC — Software Test Life Cycle", "UAT — User Acceptance Testing", "SIT — System Integration Testing", "BDD — Behavior Driven Dev", "TDD — Test Driven Dev", "CI/CD — Continuous Integration/Delivery", "POM — Page Object Model", "API — Application Programming Interface", "SLA — Service Level Agreement"] },
+    { title: "Bug Report Checklist", icon: "🐞", items: ["Title", "Steps to reproduce", "Expected vs actual", "Environment", "Severity", "Priority", "Screenshot", "Logs", "Browser/OS", "Assigned to"] },
+    { title: "Test Case Template", icon: "🧾", items: ["Test ID", "Scenario", "Preconditions", "Steps", "Expected result", "Actual result", "Status", "Defect ID"] },
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-2">Cheatsheets</h1>
-      <p className="mb-8" style={{ color: "var(--text-muted)" }}>Quick reference cards for common QA tools and concepts.</p>
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-2">QA Cheatsheets</h1>
+      <p className="mb-8" style={{ color: "var(--text-muted)" }}>Quick reference guides for test case writing, bug reporting, automation, APIs, and common QA tools.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {sheets.map((sheet, i) => (
           <div key={i} className="p-5 rounded-xl border" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "QA Academy — Free QA Engineer Course | Learn Software Testing",
     template: "%s | QA Academy",
   },
-  description: "Free comprehensive QA Engineering course: manual testing, Selenium, Playwright, Cypress, API testing, CI/CD, performance testing, and interview preparation. 18 modules, 70+ lessons, 180 quiz questions.",
+  description: "Complete QA learning hub for beginners and testers: manual testing, automation with Selenium and Playwright, API testing, performance testing, CI/CD, security testing, and interview preparation — all in one free place.",
   keywords: [
     // High-volume head terms
     "QA Engineer course", "software testing tutorial", "test automation course", "free QA course",

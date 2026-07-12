@@ -13,6 +13,37 @@ const faqs = [
   { q: "What tools will I learn?", a: "Postman, Selenium, Playwright, Cypress, JMeter, k6, OWASP ZAP, Appium, Git, GitHub Actions, Jenkins, and more." },
 ];
 
+const learningAreas = [
+  { title: "QA Fundamentals", description: "SDLC, STLC, test planning, test cases, bug life cycle, defect tracking, and quality mindset.", icon: "🧪" },
+  { title: "Manual Testing", description: "Exploratory testing, smoke and sanity testing, regression, boundary value analysis, and UAT.", icon: "📝" },
+  { title: "Automation Testing", description: "Selenium, Playwright, Cypress, test design patterns, frameworks, and CI/CD automation.", icon: "🤖" },
+  { title: "API & Performance", description: "Postman, REST, assertions, JMeter, k6, mocking, and performance bottlenecks.", icon: "⚡" },
+  { title: "Security & Mobile", description: "OWASP basics, security testing, Appium, mobile strategies, and real-world risks.", icon: "🔐" },
+  { title: "Career Growth", description: "Interview prep, resume guidance, portfolio projects, and how to grow from junior to senior QA.", icon: "🎯" },
+];
+
+const learningPath = [
+  { step: "1", title: "Start with fundamentals", text: "Understand what QA is, how software teams work, and how defects are reported and tracked." },
+  { step: "2", title: "Practice manual testing", text: "Learn test design, requirement analysis, bug reports, and how to validate systems effectively." },
+  { step: "3", title: "Move into automation", text: "Build confidence with Selenium, Playwright, Cypress, and CI/CD workflows." },
+  { step: "4", title: "Prepare for real-world roles", text: "Master API testing, performance, security, and interview readiness for junior to senior roles." },
+];
+
+const tools = [
+  "Selenium", "Playwright", "Cypress", "Postman", "JMeter", "k6", "OWASP ZAP", "Appium", "Git", "GitHub Actions", "Jenkins", "Jira", "TestRail", "SQL", "Docker"
+];
+
+const beginnerToSeniorTopics = [
+  "Basics of software testing", "Test case writing", "Bug reporting", "Agile and Scrum basics", "API testing", "Database testing", "Automation frameworks", "Performance testing", "Security testing", "Leadership in QA", "Quality strategy", "Test architecture"
+];
+
+const guideLinks = [
+  { title: "QA Basics", href: "/guides/qa-basics", description: "Understand the foundation of quality assurance and software testing." },
+  { title: "Manual Testing Guide", href: "/guides/manual-testing", description: "Learn how to test manually, report bugs, and write better test cases." },
+  { title: "Selenium Beginner Guide", href: "/guides/selenium", description: "Start with the basics of browser automation and Selenium workflows." },
+  { title: "QA Interview Questions", href: "/interview-questions", description: "Prepare for interviews with practical QA questions and answers." },
+];
+
 export default function Home() {
   const [progress, setProgress] = useState<Progress | null>(null);
   useEffect(() => { setProgress(getProgress()); }, []);
@@ -28,14 +59,96 @@ export default function Home() {
       {/* Hero */}
       <section className="text-center py-12 md:py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "DM Serif Display, serif" }}>
-          Become a <span style={{ color: "var(--brand)" }}>QA Engineer</span>
+          The <span style={{ color: "var(--brand)" }}>complete QA learning hub</span>
         </h1>
-        <p className="text-lg max-w-2xl mx-auto mb-6" style={{ color: "var(--text-muted)" }}>
-          Free, comprehensive course — {modules.length} modules, {totalLessons}+ lessons, hands-on quizzes. From manual testing to full automation. No login required.
+        <p className="text-lg max-w-3xl mx-auto mb-6" style={{ color: "var(--text-muted)" }}>
+          Learn everything a QA engineer needs in one place — from fundamentals and manual testing to Selenium, Playwright, API testing, performance, security, CI/CD, and interview prep. No login required.
         </p>
-        <a href={`/module/${modules[0]?.slug}`} className="inline-block px-6 py-3 rounded-lg text-white font-semibold transition hover:opacity-90" style={{ background: "var(--brand)" }}>
-          Start Learning →
-        </a>
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <a href={`/module/${modules[0]?.slug}`} className="inline-block px-6 py-3 rounded-lg text-white font-semibold transition hover:opacity-90" style={{ background: "var(--brand)" }}>
+            Start Learning →
+          </a>
+          <a href="#curriculum" className="inline-block px-6 py-3 rounded-lg border font-semibold transition hover:opacity-90" style={{ borderColor: "var(--border)", color: "var(--text)" }}>
+            Browse All Modules
+          </a>
+        </div>
+        <div className="max-w-3xl mx-auto rounded-2xl border p-5 text-left" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+          <p className="text-sm font-semibold uppercase tracking-wide" style={{ color: "var(--brand)" }}>What you will find here</p>
+          <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>
+            A beginner-friendly QA course with structured modules, real-world examples, quizzes, hands-on practice, interview questions, and a clear roadmap from beginner to job-ready tester.
+          </p>
+        </div>
+      </section>
+
+      <section className="mb-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {learningAreas.map((area) => (
+          <div key={area.title} className="rounded-2xl border p-5" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+            <div className="text-3xl mb-3">{area.icon}</div>
+            <h3 className="font-semibold text-lg">{area.title}</h3>
+            <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>{area.description}</p>
+          </div>
+        ))}
+      </section>
+
+      <section className="mb-12 rounded-2xl border p-6" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-2xl font-bold mb-4">A complete roadmap for QA learners</h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {learningPath.map((item) => (
+            <div key={item.step} className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--bg-alt)" }}>
+              <div className="text-sm font-semibold" style={{ color: "var(--brand)" }}>{item.step}</div>
+              <h3 className="font-semibold mt-1">{item.title}</h3>
+              <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-12 rounded-2xl border p-6" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-2xl font-bold mb-4">Tools and practices covered</h2>
+        <div className="flex flex-wrap gap-2">
+          {tools.map((tool) => (
+            <span key={tool} className="px-3 py-2 rounded-full text-sm" style={{ background: "var(--bg-alt)", color: "var(--text)" }}>{tool}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-12 rounded-2xl border p-6" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-2xl font-bold mb-4">From beginner to senior QA topics</h2>
+        <div className="grid gap-3 md:grid-cols-2">
+          {beginnerToSeniorTopics.map((topic) => (
+            <div key={topic} className="rounded-lg border p-3 text-sm" style={{ borderColor: "var(--border)", background: "var(--bg-alt)" }}>{topic}</div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-12 rounded-2xl border p-6" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-2xl font-bold mb-4">Why this site is built for QA learners</h2>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--bg-alt)" }}>
+            <h3 className="font-semibold">Beginner-friendly</h3>
+            <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>Starts from the basics of QA, testing concepts, and real-world software workflows.</p>
+          </div>
+          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--bg-alt)" }}>
+            <h3 className="font-semibold">Practical</h3>
+            <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>Covers test case design, bug reporting, automation, APIs, performance, and security.</p>
+          </div>
+          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--bg-alt)" }}>
+            <h3 className="font-semibold">Career-focused</h3>
+            <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>Helps learners move from junior QA to capable automation and quality engineering roles.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-12 rounded-2xl border p-6" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-2xl font-bold mb-4">Helpful guides and interview prep</h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {guideLinks.map((guide) => (
+            <a key={guide.href} href={guide.href} className="rounded-xl border p-4 transition hover:-translate-y-0.5" style={{ borderColor: "var(--border)", background: "var(--bg-alt)" }}>
+              <h3 className="font-semibold" style={{ color: "var(--brand)" }}>{guide.title}</h3>
+              <p className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>{guide.description}</p>
+            </a>
+          ))}
+        </div>
       </section>
 
       {progress && completedCount > 0 && (
@@ -53,8 +166,8 @@ export default function Home() {
       <AdSlot slot="HOME_TOP_AD" format="horizontal" className="mb-8" />
 
       {/* Curriculum Grid */}
-      <section>
-        <h2 className="text-2xl font-bold mb-6">Curriculum — 18 Modules</h2>
+      <section id="curriculum">
+        <h2 className="text-2xl font-bold mb-6">Complete curriculum — 18 modules in one place</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {modules.map((m) => {
             const pct = progress ? getModuleProgress(m.id, m.lessons.map(l => l.id)) : 0;
