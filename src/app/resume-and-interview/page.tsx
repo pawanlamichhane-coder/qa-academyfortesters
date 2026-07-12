@@ -35,7 +35,7 @@ export default function ResumeAndInterviewPage() {
       <Link href="/" className="text-sm font-semibold" style={{ color: "var(--brand)" }}>← Back to home</Link>
       <h1 className="text-3xl font-bold mt-4 mb-3">QA Resume and Interview Prep</h1>
       <p className="mb-8" style={{ color: "var(--text-muted)" }}>
-        This section helps QA learners prepare for applications and interviews by focusing on the skills employers care about most.
+        This section helps QA learners prepare for applications and interviews by focusing on the skills employers care about most. In practice, hiring teams want evidence of clear thinking, practical testing experience, and the ability to communicate well.
       </p>
 
       <div className="grid gap-6 md:grid-cols-3">
@@ -48,6 +48,16 @@ export default function ResumeAndInterviewPage() {
           </div>
         ))}
       </div>
+
+      <section className="rounded-2xl border p-6 mt-6" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-xl font-bold mb-3">What interviewers often look for</h2>
+        <ul className="list-disc ml-6 space-y-2" style={{ color: "var(--text-muted)" }}>
+          <li>Strong understanding of testing principles and real-world quality risks.</li>
+          <li>Ability to explain how you would test a feature from start to finish.</li>
+          <li>Clear communication about bugs, evidence, severity, and priority.</li>
+          <li>Familiarity with tools such as Postman, Selenium, Playwright, Git, and CI/CD basics.</li>
+        </ul>
+      </section>
     </div>
   );
 }

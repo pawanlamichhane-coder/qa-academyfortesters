@@ -13,7 +13,19 @@ export default function CheatsheetsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">QA Cheatsheets</h1>
-      <p className="mb-8" style={{ color: "var(--text-muted)" }}>Quick reference guides for test case writing, bug reporting, automation, APIs, and common QA tools.</p>
+      <p className="mb-8" style={{ color: "var(--text-muted)" }}>
+        Quick reference guides for test case writing, bug reporting, automation, APIs, and common QA tools. These are meant to be used while you practice, not only while you study theory.
+      </p>
+
+      <section className="rounded-2xl border p-6 mb-8" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-xl font-bold mb-3">How to use these cheat sheets</h2>
+        <ul className="list-disc ml-6 space-y-2" style={{ color: "var(--text-muted)" }}>
+          <li>Keep them next to your work during test design, bug reporting, and automation setup.</li>
+          <li>Use them as a fast reminder when you are learning a new tool or framework.</li>
+          <li>Combine them with the tutorials and modules so the shortcuts become meaningful practice.</li>
+        </ul>
+      </section>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {sheets.map((sheet, i) => (
           <div key={i} className="p-5 rounded-xl border" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
