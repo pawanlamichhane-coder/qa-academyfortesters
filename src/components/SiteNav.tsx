@@ -2,6 +2,7 @@ import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
+  { href: "/tutorials", label: "Tutorials" },
   { href: "/learning-materials", label: "Learning Materials" },
   { href: "/career-roadmap", label: "Career Roadmap" },
   { href: "/roadmap", label: "Roadmap" },

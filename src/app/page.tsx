@@ -49,6 +49,7 @@ const guideLinks = [
   { title: "Automation Best Practices", href: "/guides/automation-best-practices", description: "Learn how to design reliable, maintainable, and high-value test automation." },
   { title: "Test Strategy and Planning", href: "/guides/test-strategy", description: "Understand how to plan testing, manage risk, and make release decisions with confidence." },
   { title: "QA Metrics and Reporting", href: "/guides/metrics-and-reporting", description: "Learn how to track quality, report progress, and communicate testing outcomes clearly." },
+  { title: "Detailed QA Tutorials", href: "/tutorials", description: "Access in-depth tutorials on software testing, test cases, API testing, and Selenium basics." },
   { title: "QA Portfolio Projects", href: "/portfolio-projects", description: "Create practical projects that demonstrate QA thinking, bug reporting, automation, and quality skills." },
   { title: "Resume and Interview Prep", href: "/resume-and-interview", description: "Get ready for QA applications and interviews with focused preparation tips." },
   { title: "QA Interview Questions", href: "/interview-questions", description: "Prepare for interviews with practical QA questions and answers." },
