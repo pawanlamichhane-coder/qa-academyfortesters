@@ -7,6 +7,7 @@ const sections = [
       "Highlight testing concepts, tools, and real project experience.",
       "Show measurable outcomes such as bugs found, test coverage, or automation progress.",
       "Keep the resume clear, concise, and tailored to QA roles.",
+      "Add a short 'Projects' section with 2-4 practical QA examples.",
     ],
   },
   {
@@ -15,6 +16,7 @@ const sections = [
       "Practice explaining your testing approach and decision-making process.",
       "Be ready to discuss bug reports, test cases, automation choices, and teamwork.",
       "Review general software engineering concepts as well as QA-specific topics.",
+      "Prepare small examples that show how you solved real testing problems.",
     ],
   },
   {
@@ -25,8 +27,17 @@ const sections = [
       "Selenium, Playwright, or Cypress basics",
       "Regression, smoke, sanity, and exploratory testing",
       "Bug lifecycle and defect reporting",
+      "CI/CD thinking and test automation strategy",
     ],
   },
+];
+
+const sampleQuestions = [
+  "How would you test a login feature end to end?",
+  "What is the difference between smoke testing and regression testing?",
+  "How do you write a high-quality bug report?",
+  "Why would you choose Playwright over Selenium for a new project?",
+  "How would you test an API that requires authentication?",
 ];
 
 export default function ResumeAndInterviewPage() {
@@ -56,6 +67,13 @@ export default function ResumeAndInterviewPage() {
           <li>Ability to explain how you would test a feature from start to finish.</li>
           <li>Clear communication about bugs, evidence, severity, and priority.</li>
           <li>Familiarity with tools such as Postman, Selenium, Playwright, Git, and CI/CD basics.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-2xl border p-6 mt-6" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
+        <h2 className="text-xl font-bold mb-3">Practice interview questions</h2>
+        <ul className="list-disc ml-6 space-y-2" style={{ color: "var(--text-muted)" }}>
+          {sampleQuestions.map((question) => <li key={question}>{question}</li>)}
         </ul>
       </section>
     </div>
