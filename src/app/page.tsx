@@ -41,7 +41,19 @@ const guideLinks = [
   { title: "QA Basics", href: "/guides/qa-basics", description: "Understand the foundation of quality assurance and software testing." },
   { title: "Manual Testing Guide", href: "/guides/manual-testing", description: "Learn how to test manually, report bugs, and write better test cases." },
   { title: "Selenium Beginner Guide", href: "/guides/selenium", description: "Start with the basics of browser automation and Selenium workflows." },
+  { title: "API Testing Guide", href: "/guides/api-testing", description: "Learn how to validate APIs, inspect responses, and create strong test scenarios." },
+  { title: "Playwright Guide", href: "/guides/playwright", description: "Explore modern, reliable browser automation with Playwright." },
+  { title: "Performance Testing Guide", href: "/guides/performance-testing", description: "Learn how to measure speed, load, and reliability under pressure." },
+  { title: "Security Testing Guide", href: "/guides/security-testing", description: "Understand common security risks and how to test them responsibly." },
+  { title: "QA Tools and Setup Guide", href: "/guides/tools-and-setup", description: "Build a practical QA environment for manual testing, APIs, and automation." },
+  { title: "Automation Best Practices", href: "/guides/automation-best-practices", description: "Learn how to design reliable, maintainable, and high-value test automation." },
+  { title: "Test Strategy and Planning", href: "/guides/test-strategy", description: "Understand how to plan testing, manage risk, and make release decisions with confidence." },
+  { title: "QA Metrics and Reporting", href: "/guides/metrics-and-reporting", description: "Learn how to track quality, report progress, and communicate testing outcomes clearly." },
+  { title: "QA Portfolio Projects", href: "/portfolio-projects", description: "Create practical projects that demonstrate QA thinking, bug reporting, automation, and quality skills." },
+  { title: "Resume and Interview Prep", href: "/resume-and-interview", description: "Get ready for QA applications and interviews with focused preparation tips." },
   { title: "QA Interview Questions", href: "/interview-questions", description: "Prepare for interviews with practical QA questions and answers." },
+  { title: "Learning Materials", href: "/learning-materials", description: "Follow a full setup-to-practice path covering fundamentals, tools, and real projects." },
+  { title: "QA Career Roadmap", href: "/career-roadmap", description: "See how QA skills grow from junior roles into senior quality engineering positions." },
 ];
 
 export default function Home() {
