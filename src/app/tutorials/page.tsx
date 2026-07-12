@@ -4,32 +4,32 @@ const tutorials = [
   {
     title: "What is Software Testing?",
     href: "/tutorials/what-is-software-testing",
-    description: "A practical guide to QA, testing fundamentals, the testing lifecycle, and why testing matters in real projects.",
+    description: "A practical guide to QA fundamentals, the testing lifecycle, defect handling, and why testing matters in real projects.",
   },
   {
     title: "How to Write Test Cases",
     href: "/tutorials/how-to-write-test-cases",
-    description: "Learn how to create test cases with clear steps, expected results, positive and negative coverage, and real-world examples.",
+    description: "Learn how to write clear, reproducible test cases with positive and negative coverage, expected results, and real examples.",
   },
   {
     title: "Database Testing – Software Testing",
     href: "/tutorials/database-testing",
-    description: "Explore schema testing, transactions, constraints, SQL examples, and practical database testing workflows.",
+    description: "Explore schema validation, transactions, constraints, SQL examples, and practical database testing workflows.",
   },
   {
     title: "Playwright Testing – From Basics to Advanced",
     href: "/tutorials/playwright-testing",
-    description: "Learn modern browser automation with locators, assertions, fixtures, and reliable test design.",
+    description: "A full walkthrough covering setup, locators, assertions, fixtures, debugging, CI, and advanced automation patterns.",
   },
   {
     title: "Cypress Testing – End-to-End Automation",
     href: "/tutorials/cypress-testing",
-    description: "Understand Cypress commands, assertions, custom commands, and UI automation best practices.",
+    description: "Understand Cypress commands, assertions, fixtures, network interception, custom commands, and reliable UI automation.",
   },
   {
     title: "SQL for Testers",
     href: "/tutorials/sql-for-testers",
-    description: "Use SQL to validate data, inspect application state, and uncover issues at the database layer.",
+    description: "Use SQL to validate data, inspect application state, and uncover issues at the database layer with real query examples.",
   },
   {
     title: "Performance Testing",
@@ -44,12 +44,12 @@ const tutorials = [
   {
     title: "API Testing with Postman",
     href: "/tutorials/postman-api-testing",
-    description: "A step-by-step guide to testing REST APIs, sending requests, validating responses, and creating useful assertions.",
+    description: "A detailed guide to REST API testing, request structure, response validation, collections, and automation.",
   },
   {
     title: "Selenium for Beginners",
     href: "/tutorials/selenium-beginners",
-    description: "Learn setup, locators, waits, and your first browser automation script in a beginner-friendly way.",
+    description: "Learn setup, locators, waits, page objects, browser automation, and the move from beginner to reliable test code.",
   },
 ];
 
@@ -59,10 +59,10 @@ export default function TutorialsPage() {
       <Link href="/" className="text-sm font-semibold" style={{ color: "var(--brand)" }}>← Back to home</Link>
       <h1 className="text-3xl font-bold mt-4 mb-3">Detailed QA Tutorials</h1>
       <p className="mb-4" style={{ color: "var(--text-muted)" }}>
-        These tutorials are written to be more practical and useful than a simple overview. They move from fundamentals to advanced concepts and include examples, workflows, and setup guidance.
+        These tutorials are written to be genuinely useful. Each page includes practical setup guidance, step-by-step explanation, example code, and the kind of advanced patterns QA engineers use in real projects.
       </p>
       <p className="mb-8 text-sm" style={{ color: "var(--text-muted)" }}>
-        Start with beginner-friendly material, then move toward API testing, automation, and database validation techniques used in real projects.
+        Start with the fundamentals, then move toward automation, API work, database validation, performance, and security with focused study material instead of brief summaries.
       </p>
 
       <div className="grid gap-6 md:grid-cols-2">
